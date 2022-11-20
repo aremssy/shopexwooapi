@@ -332,7 +332,10 @@ date_default_timezone_set('Africa/Lagos');
 
             $item_color2 = (explode(",", $order->mf_color2));
             $item_size2 = (explode(",", $order->mf_size2));
+
             $item_watt = (explode(",", $order->item_watt));
+            $item_characters = (explode(",", $order->item_characters));
+            $item_napper_size = (explode(",", $order->item_napper_size));
             
         //   Search for Simply Fit
             if (in_array('STV540308', $item_sku)) {
@@ -400,43 +403,83 @@ date_default_timezone_set('Africa/Lagos');
 
 
                 if ($value == 'STV690684' || $value == 'GGL690684' || $value == 'EM690684' || $value == 'FB690684' || $value == 'EM690684') {
-                    if($item_size[$key] == "M" && $item_color[$key] == "WHITE"){
+                    if($item_size[$key] == "M" && $item_characters[$key] == "WHITE"){
                         $genie_bra_mw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "M" && $item_color[$key] == "BLACK"){
+                    elseif($item_size[$key] == "M" && $item_characters[$key] == "BLACK"){
                         $genie_bra_mb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "L" && $item_color[$key] == "WHITE"){
+                    elseif($item_size[$key] == "L" && $item_characters[$key] == "WHITE"){
                         $genie_bra_lw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "L" && $item_color[$key] == "BLACK"){
+                    elseif($item_size[$key] == "L" && $item_characters[$key] == "BLACK"){
                         $genie_bra_lb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "XL" && $item_color[$key] == "WHITE"){
+                    elseif($item_size[$key] == "XL" && $item_characters[$key] == "WHITE"){
                         $genie_bra_xlw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "XL" && $item_color[$key] == "BLACK"){
+                    elseif($item_size[$key] == "XL" && $item_characters[$key] == "BLACK"){
                         $genie_bra_xlb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "1X" && $item_color[$key] == "WHITE"){
+                    elseif($item_size[$key] == "1X" && $item_characters[$key] == "WHITE"){
                         $genie_bra_1xw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "1X" && $item_color[$key] == "BLACK"){
+                    elseif($item_size[$key] == "1X" && $item_characters[$key] == "BLACK"){
                         $genie_bra_1xb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "2X" && $item_color[$key] == "WHITE"){
+                    elseif($item_size[$key] == "2X" && $item_characters[$key] == "WHITE"){
                         $genie_bra_2xw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "3X" && $item_color[$key] == "WHITE"){
+                    elseif($item_size[$key] == "3X" && $item_characters[$key] == "WHITE"){
                         $genie_bra_3xw = $item_qty[$key];
                     }
                 }
 
-                if(in_array('STV690684', $item_sku)) {$channel_sku = "Website";  }
+                if(in_array('STV690684', $item_sku)) {$channel_sku = "Website"; }
                 if(in_array('IG690684', $item_sku))  {$channel_sku = "Instagram";}
                 if(in_array('FB690684', $item_sku))  {$channel_sku = "Facebook"; }
                 if(in_array('GGL690684', $item_sku)) {$channel_sku = "Google"; }  
                 if(in_array('EM690684', $item_sku)) {$channel_sku = "Email";}
+
+                // Happy Nappers
+                if ($value == 'STV6903105' || $value == 'GGL6903105' || $value == 'EM6903105') {
+                    if($item_napper_size[$key] == "M" && $item_color[$key] == "PINK CAT"){
+                        // $napper_mpc = $item_qty[$key];
+                        $napper_m = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "PINK CAT"){
+                        // $napper_lpc = $item_qty[$key];
+                        $napper_l = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "PINK UNICORN"){
+                        // $napper_lpu = $item_qty[$key];
+                        $napper_l = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "PINK UNICORN"){
+                        // $napper_mpu = $item_qty[$key];
+                        $napper_m = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "WHITE UNICORN"){
+                        // $napper_lwu = $item_qty[$key];
+                        $napper_l = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "WHITE UNICORN"){
+                        // $napper_mwu = $item_qty[$key];
+                        $napper_m = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "GREY SHARK"){
+                        // $napper_lgs = $item_qty[$key];
+                        $napper_l = $item_qty[$key];
+                    }
+                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "GREY SHARK"){
+                        // $napper_mgs = $item_qty[$key];
+                        $napper_m = $item_qty[$key];
+                    }
+                }
+
+                if(in_array('STV6903105', $item_sku)) {$channel_sku = "Website"; }
+                if(in_array('GGL6903105', $item_sku)) {$channel_sku = "Google"; }
+                if(in_array('EM6903105', $item_sku)) {$channel_sku = "Email";}
 
                 // For Nutri Bullet
                 if ($value == 'STV690387' || $value == 'GGL690387' || $value == 'EM690387' || $value == 'FB690387' || $value == 'EM690387') {
@@ -464,16 +507,26 @@ date_default_timezone_set('Africa/Lagos');
                 if(in_array('EM690387', $item_sku)) {$channel_sku = "Email";}
             }
 
-            
+
             $fit_jen_1420lb = myfit_qty($fit_jen_1420lb, $fit_jen_1420lb_2);
             $fitdw212  = myfit_qty($fitdw212, $fitdw212_2);
             $fitlb212  = myfit_qty($fitlb212, $fitlb212_2);
             $fitb1420  = myfit_qty($fitb1420, $fitb1420_2);
             $fitdw1420 = myfit_qty($fitdw1420, $fitdw1420_2) ;
-            // if (in_array('STV540305', $item_sku)) {
-            // $key = array_search('STV540305', $item_sku);
-            // $m_fitqty    = $item_qty[$key];
-            // }
+            
+
+            //   Contour 2-in-1 Leg Relief Wedge Pillow
+            if (in_array('STV5403107', $item_sku) || in_array('EM5403107', $item_sku) || in_array('GGL5403107', $item_sku)) {
+
+                if(in_array('STV5403107', $item_sku)) {$channel_sku = "Website";  
+                $key = array_search('STV5403107', $item_sku);}
+                if(in_array('GGL5403107', $item_sku)) {$channel_sku = "Google";   
+                $key = array_search('GGL5403107', $item_sku);}
+                if(in_array('EM5403107', $item_sku)) {$channel_sku = "Email";   
+                $key = array_search('EM5403107', $item_sku);}
+
+                $contour_wedge    = $item_qty[$key];
+            }
 
         //   Search for slim_jeggings
             if (in_array('STV540317', $item_sku)) {
@@ -700,26 +753,9 @@ date_default_timezone_set('Africa/Lagos');
                 $h2omop      = $item_qty[$key];
             }   
 
-            // $channel_sku = (in_array('STV540305B', $item_sku)) ? "Social Media" : "Website";
-            
-            // $new_price = ($chefprice != "")  ? $chefprice : "0" ;
             $new_qty = ($chefqty != "" ) ? $chefqty : 0;
             
-            $ufp_price  = ($new_combo_qty <= 1 ) ? "11950" : "22000";
-            // $ufp_price_remove_pan  = ($new_qty < 1 ) ? "22000" : "7500";
-            
-
-    // Check for Combo
-     /*   if($new_qty >= 1 || $xlqty >= 1){
-            $order->shipping_cost = 0;
-        }
-        if($fitb212 >= 1 || $fitdw212 >= 1 || $fitlb212 >= 1 || $fitb1420 >= 1 || $fitdw1420 >= 1 || $fitlb1420 >= 1 || $slim_jeggings_qty >= 1 || $velform_mini_qty >= 1 || $comfortisse_bra_qty >= 1 || $polaryte_unglasses_qty >= 1 || $starlyf_cam_qty >= 1 || $insta_life_qty >= 1 || $gymform_abs_qty >= 1){
-            $order->shipping_cost = 1950;
-        }else{
-            $order->shipping_cost = 0;
-            // $order->total = $order->total - 1950;
-        }*/
-        
+            $ufp_price  = ($new_combo_qty <= 1 ) ? "11950" : "22000";      
         
          $phone  = str_replace(" ", "", $order->customer_phone);
          $phone  = str_replace('-', "", $phone);
@@ -791,6 +827,11 @@ date_default_timezone_set('Africa/Lagos');
              array("name" => "nutribullet900white", "value" => $nb9white ),
              array("name" => "nutribullet900grey", "value" => $nb9grey ),
              array("name" => "nutribullet900gold", "value" => $nb9gold ),
+
+             array("name" => "contour_2_in_one_wedge", "value" => $contour_wedge ),
+
+             array("name" => "happy_nappers_large_c", "value" => $napper_l ),
+             array("name" => "happy_nappers_medium_c", "value" => $napper_m ),
              
             array("name" => "total_amount", "value" => $order->total ),
             array("name" => "deliverycharge", "value" => $order->shipping_cost ),
@@ -836,100 +877,22 @@ date_default_timezone_set('Africa/Lagos');
         return $qty;
     }
     function saveMissedCalls($login_result, $url,  $number){
-
-    $session_id = $login_result->id;
-    $set_entry_parameters = array(
-      "session" => $session_id,
-      "module_name" => "AOBH_BusinessHours",
-      //Record attributes
-      "name_value_list" => array(
-        array("name" => "name", "value" => $number ),
-        array("name" => "description", "value" => "Request For Call Back"),
-        ),
-      );
-    $set_entry_result = call("set_entry", $set_entry_parameters, $url);
-    $id = $set_entry_result->id;
-    if ($set_entry_result) {
-    //   var_dump($set_entry_result);
-      return true;
-    }
+        $session_id = $login_result->id;
+        $set_entry_parameters = array(
+          "session" => $session_id,
+          "module_name" => "AOBH_BusinessHours",
+          //Record attributes
+          "name_value_list" => array(
+            array("name" => "name", "value" => $number ),
+            array("name" => "description", "value" => "Request For Call Back"),
+            ),
+          );
+        $set_entry_result = call("set_entry", $set_entry_parameters, $url);
+        $id = $set_entry_result->id;
+        if ($set_entry_result) {
+        //   var_dump($set_entry_result);
+          return true;
+        }
     }
     
-    function payRubies($login_result, $url,  $id){
-
-    $session_id = $login_result->id;
-    $set_entry_parameters = array(
-      "session" => $session_id,
-      "module_name" => "Contacts",
-      //Record attributes
-      "name_value_list" => array(
-        array("name" => "id", "value" => $id ),
-        array("name" => "payment_status", "value" => "Paid" ),
-        ),
-      );
-
-    $set_entry_result = call("set_entry", $set_entry_parameters, $url);
-        var_dump($set_entry_result);
-    $id = $set_entry_result->id;
-    die();
-    // if ($set_entry_result) {
-    //   var_dump($set_entry_result);
-    //   return true;
-    // }
-    }
-
-    // string contianing a GUID in the format: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
-
-    function ensure_length(&$string, $length)
-      {
-          $strlen = strlen($string);
-          if ($strlen < $length) {
-              $string = str_pad($string, $length, '0');
-          } elseif ($strlen > $length) {
-              $string = substr($string, 0, $length);
-          }
-      }
-
-    function create_guid()
-      {
-          $microTime = microtime();
-          list($a_dec, $a_sec) = explode(' ', $microTime);
-
-          $dec_hex = dechex($a_dec * 1000000);
-          $sec_hex = dechex($a_sec);
-
-          ensure_length($dec_hex, 5);
-          ensure_length($sec_hex, 6);
-
-          $guid = '';
-          $guid .= $dec_hex;
-          $guid .= create_guid_section(3);
-          $guid .= '-';
-          $guid .= create_guid_section(4);
-          $guid .= '-';
-          $guid .= create_guid_section(4);
-          $guid .= '-';
-          $guid .= create_guid_section(4);
-          $guid .= '-';
-          $guid .= $sec_hex;
-          $guid .= create_guid_section(6);
-
-          return $guid;
-      }
-
-    function create_guid_section($characters)
-        {
-            $return = '';
-            for ($i = 0; $i < $characters; ++$i) {
-                $return .= dechex(mt_rand(0, 15));
-            }
-
-            return $return;
-        }
-  // Unique ID ends here...
-
 ?>
-
-
-
-
