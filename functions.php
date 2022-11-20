@@ -443,35 +443,35 @@ date_default_timezone_set('Africa/Lagos');
 
                 // Happy Nappers
                 if ($value == 'STV6903105' || $value == 'GGL6903105' || $value == 'EM6903105') {
-                    if($item_napper_size[$key] == "M" && $item_color[$key] == "PINK CAT"){
+                    if($item_napper_size[$key] == "M" && $item_characters[$key] == "PINK CAT"){
                         // $napper_mpc = $item_qty[$key];
                         $napper_m = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "PINK CAT"){
+                    elseif($item_napper_size[$key] == "L" && $item_characters[$key] == "PINK CAT"){
                         // $napper_lpc = $item_qty[$key];
                         $napper_l = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "PINK UNICORN"){
+                    elseif($item_napper_size[$key] == "L" && $item_characters[$key] == "PINK UNICORN"){
                         // $napper_lpu = $item_qty[$key];
                         $napper_l = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "PINK UNICORN"){
+                    elseif($item_napper_size[$key] == "M" && $item_characters[$key] == "PINK UNICORN"){
                         // $napper_mpu = $item_qty[$key];
                         $napper_m = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "WHITE UNICORN"){
+                    elseif($item_napper_size[$key] == "L" && $item_characters[$key] == "WHITE UNICORN"){
                         // $napper_lwu = $item_qty[$key];
                         $napper_l = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "WHITE UNICORN"){
+                    elseif($item_napper_size[$key] == "M" && $item_characters[$key] == "WHITE UNICORN"){
                         // $napper_mwu = $item_qty[$key];
                         $napper_m = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "L" && $item_color[$key] == "GREY SHARK"){
+                    elseif($item_napper_size[$key] == "L" && $item_characters[$key] == "GREY SHARK"){
                         // $napper_lgs = $item_qty[$key];
                         $napper_l = $item_qty[$key];
                     }
-                    elseif($item_napper_size[$key] == "M" && $item_color[$key] == "GREY SHARK"){
+                    elseif($item_napper_size[$key] == "M" && $item_characters[$key] == "GREY SHARK"){
                         // $napper_mgs = $item_qty[$key];
                         $napper_m = $item_qty[$key];
                     }
