@@ -354,7 +354,7 @@ date_default_timezone_set('Africa/Lagos');
                 $key = array_search('STV540307', $item_sku);
                 $t_pumpqty    = $item_qty[$key];
             }
-           $fitb212 = $fitdw212 = $fitlb212 = $fitb1420 = $fitdw1420 = $fitlb1420 = $genie_bra_mw = $genie_bra_mb = $genie_bra_lw  = $genie_bra_lb =  $genie_bra_xlw = $genie_bra_xlb = $genie_bra_1xw = $genie_bra_1xb = $genie_bra_2xw = $genie_bra_3xw = $nb9gold = $nb9grey = $nb9white = $nb6grey = $nb6white = 0;
+           // $fitb212 = $fitdw212 = $fitlb212 = $fitb1420 = $fitdw1420 = $fitlb1420 = $genie_bra_mw = $genie_bra_mb = $genie_bra_lw  = $genie_bra_lb =  $genie_bra_xlw = $genie_bra_xlb = $genie_bra_1xw = $genie_bra_1xb = $genie_bra_2xw = $genie_bra_3xw = $nb9gold = $nb9grey = $nb9white = $nb6grey = $nb6white = 0;
 
         //   Search for Variable Product
             foreach ($item_sku as $key => $value){
@@ -403,34 +403,34 @@ date_default_timezone_set('Africa/Lagos');
 
 
                 if ($value == 'STV690684' || $value == 'GGL690684' || $value == 'EM690684' || $value == 'FB690684' || $value == 'EM690684') {
-                    if($item_size[$key] == "M" && $item_characters[$key] == "WHITE"){
+                    if($item_size[$key] == "M" && $item_color[$key] == "WHITE"){
                         $genie_bra_mw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "M" && $item_characters[$key] == "BLACK"){
+                    elseif($item_size[$key] == "M" && $item_color[$key] == "BLACK"){
                         $genie_bra_mb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "L" && $item_characters[$key] == "WHITE"){
+                    elseif($item_size[$key] == "L" && $item_color[$key] == "WHITE"){
                         $genie_bra_lw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "L" && $item_characters[$key] == "BLACK"){
+                    elseif($item_size[$key] == "L" && $item_color[$key] == "BLACK"){
                         $genie_bra_lb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "XL" && $item_characters[$key] == "WHITE"){
+                    elseif($item_size[$key] == "XL" && $item_color[$key] == "WHITE"){
                         $genie_bra_xlw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "XL" && $item_characters[$key] == "BLACK"){
+                    elseif($item_size[$key] == "XL" && $item_color[$key] == "BLACK"){
                         $genie_bra_xlb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "1X" && $item_characters[$key] == "WHITE"){
+                    elseif($item_size[$key] == "1X" && $item_color[$key] == "WHITE"){
                         $genie_bra_1xw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "1X" && $item_characters[$key] == "BLACK"){
+                    elseif($item_size[$key] == "1X" && $item_color[$key] == "BLACK"){
                         $genie_bra_1xb = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "2X" && $item_characters[$key] == "WHITE"){
+                    elseif($item_size[$key] == "2X" && $item_color[$key] == "WHITE"){
                         $genie_bra_2xw = $item_qty[$key];
                     }
-                    elseif($item_size[$key] == "3X" && $item_characters[$key] == "WHITE"){
+                    elseif($item_size[$key] == "3X" && $item_color[$key] == "WHITE"){
                         $genie_bra_3xw = $item_qty[$key];
                     }
                 }
