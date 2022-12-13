@@ -621,7 +621,7 @@ date_default_timezone_set('Africa/Lagos');
 
 
         //   Steam Mop
-            if (in_array('STV6903110', $item_sku) || in_array('EM6903110', $item_sku) || in_array('GGL6903110', $item_sku))) {
+            if (in_array('STV6903110', $item_sku) || in_array('EM6903110', $item_sku) || in_array('GGL6903110', $item_sku)) {
                 if(in_array('STV6903110', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV6903110', $item_sku);}
                 if(in_array('GGL6903110', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL6903110', $item_sku);}
                 if(in_array('EM6903110', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM6903110', $item_sku);}
@@ -789,7 +789,7 @@ date_default_timezone_set('Africa/Lagos');
         
          $phone  = str_replace(" ", "", $order->customer_phone);
          $phone  = str_replace('-', "", $phone);
-        $set_entry_parameters = array(
+         $set_entry_parameters = array(
           //session id
           "session" => $session_id,
 
