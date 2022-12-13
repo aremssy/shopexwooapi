@@ -637,7 +637,16 @@ date_default_timezone_set('Africa/Lagos');
 
                 $pressure_king_pro      = $item_qty[$key];
             } 
-            
+
+        //   REVIVA GUN
+            if (in_array('STV5403116', $item_sku) || in_array('EM5403116', $item_sku) || in_array('GGL5403116', $item_sku)) {
+                if(in_array('STV5403116', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403116', $item_sku);}
+                if(in_array('GGL5403116', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL5403116', $item_sku);}
+                if(in_array('EM5403116', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM5403116', $item_sku);}
+
+                $reviva_gun      = $item_qty[$key];
+            } 
+
             
         //   Only Copper Chef Pan Website
             if (in_array('STV540303', $item_sku) || in_array('IG540303', $item_sku) || in_array('FB540303', $item_sku) || in_array('GGL540303', $item_sku) || in_array('EM540303', $item_sku)) {
@@ -855,6 +864,7 @@ date_default_timezone_set('Africa/Lagos');
              array("name" => "happy_nappers_medium_c", "value" => $napper_m ),
              array("name" => "genesis_mop_qty_c", "value" => $genesis_mop ),
              array("name" => "pressure_king_pro_c", "value" => $pressure_king_pro ),
+             array("name" => "reviva_gun_c", "value" => $reviva_gun ),
              
             array("name" => "total_amount", "value" => $order->total ),
             array("name" => "deliverycharge", "value" => $order->shipping_cost ),
