@@ -618,6 +618,26 @@ date_default_timezone_set('Africa/Lagos');
                 
                 $wcqty    = $item_qty[$key];
             }
+
+
+        //   Steam Mop
+            if (in_array('STV6903110', $item_sku) || in_array('EM6903110', $item_sku) || in_array('GGL6903110', $item_sku))) {
+                if(in_array('STV6903110', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV6903110', $item_sku);}
+                if(in_array('GGL6903110', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL6903110', $item_sku);}
+                if(in_array('EM6903110', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM6903110', $item_sku);}
+
+                $genesis_mop      = $item_qty[$key];
+            }   
+
+        //   Pressure King Pro
+            if (in_array('STV5403115', $item_sku) || in_array('EM5403115', $item_sku) || in_array('GGL5403115', $item_sku)) {
+                if(in_array('STV5403115', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403115', $item_sku);}
+                if(in_array('GGL5403115', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL5403115', $item_sku);}
+                if(in_array('EM5403115', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM5403115', $item_sku);}
+
+                $pressure_king_pro      = $item_qty[$key];
+            } 
+            
             
         //   Only Copper Chef Pan Website
             if (in_array('STV540303', $item_sku) || in_array('IG540303', $item_sku) || in_array('FB540303', $item_sku) || in_array('GGL540303', $item_sku) || in_array('EM540303', $item_sku)) {
@@ -752,24 +772,7 @@ date_default_timezone_set('Africa/Lagos');
 
                 $h2omop      = $item_qty[$key];
             }   
-
-        //   Steam Mop
-            if (in_array('STV6903110', $item_sku) || in_array('EM6903110', $item_sku) || in_array('GGL6903110', $item_sku))) {
-                if(in_array('STV6903110', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV6903110', $item_sku);}
-                if(in_array('GGL6903110', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL6903110', $item_sku);}
-                if(in_array('EM6903110', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM6903110', $item_sku);}
-
-                $genesis_mop      = $item_qty[$key];
-            }   
-
-        //   Pressure King Pro
-            if (in_array('STV5403115', $item_sku) || in_array('EM5403115', $item_sku) || in_array('GGL5403115', $item_sku)) {
-                if(in_array('STV5403115', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403115', $item_sku);}
-                if(in_array('GGL5403115', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL5403115', $item_sku);}
-                if(in_array('EM5403115', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM5403115', $item_sku);}
-
-                $pressure_king_pro      = $item_qty[$key];
-            }   
+  
 
             $new_qty = ($chefqty != "" ) ? $chefqty : 0;
             
