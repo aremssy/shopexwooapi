@@ -25,7 +25,6 @@ date_default_timezone_set('Africa/Lagos');
 
     }
     
-    
     function UpdateOrder($login_result, $url,  $id){
               
        $session_id = $login_result->id;
