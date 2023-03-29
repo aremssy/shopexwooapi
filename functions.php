@@ -779,6 +779,15 @@ date_default_timezone_set('Africa/Lagos');
                 if(in_array('EM690389', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM690389', $item_sku);}
 
                 $h2omop      = $item_qty[$key];
+            }  
+
+        //   SPortEX Threadmil
+            if (in_array('STV5403120', $item_sku) || in_array('GGL5403120', $item_sku) || in_array('EM5403120', $item_sku) ) {
+                if(in_array('STV5403120', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403120', $item_sku);}
+                if(in_array('EM5403120', $item_sku)) {$channel_sku = "Google";   $key = array_search('EM5403120', $item_sku);}
+                if(in_array('GGL5403120', $item_sku)) {$channel_sku = "Email";   $key = array_search('GGL5403120', $item_sku);}
+
+                $threadmil  = $item_qty[$key];
             }   
   
 
@@ -820,6 +829,7 @@ date_default_timezone_set('Africa/Lagos');
              array("name" => "supreme_combo_plus", "value" => $supereme_max ),
              array("name" => "dream_collection", "value" => $dream_collection ),
              array("name" => "h2omop", "value" => $h2omop ),
+             array("name" => "slim_fold", "value" => $threadmil ),
 
              // Genie Bra
              array("name" => "genie_bra_mw", "value" => $genie_bra_mw ),
