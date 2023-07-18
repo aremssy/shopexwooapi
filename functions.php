@@ -788,8 +788,63 @@ date_default_timezone_set('Africa/Lagos');
                 if(in_array('GGL5403120', $item_sku)) {$channel_sku = "Email";   $key = array_search('GGL5403120', $item_sku);}
 
                 $threadmil  = $item_qty[$key];
-            }   
-  
+            } 
+
+        //   SOMOTEX Products
+            if (in_array('SMT00001', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00001', $item_sku); 
+                $midea_360_blue_steel_qty_c  = $item_qty[$key];} 
+
+            if (in_array('SMT00002', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00002', $item_sku); 
+                $midea_black_469lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT00003', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00003', $item_sku); 
+                $midea_470lts_black_qty_c  = $item_qty[$key];}  
+
+            if (in_array('SMT00004', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00004', $item_sku); 
+                $midea_steel_480lt_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT00005', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00005', $item_sku); 
+                $midea_black_glass_482lts_qty_c  = $item_qty[$key];}
+
+            if (in_array('SMT00006', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00006', $item_sku); 
+                $midea_capacity_510lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT00007', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00007', $item_sku); 
+                $midea_490lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT00008', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00008', $item_sku); 
+                $midea_500lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT00009', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00009', $item_sku); 
+                $midea_stainles_640lts_qty_c  = $item_qty[$key];}  
+
+            if (in_array('SMT000010', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000010', $item_sku); 
+                $midea_stainles_650lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT000011', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000011', $item_sku); 
+                $midea_beverage_309ltrs_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT000012', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000012', $item_sku); 
+                $midea_washing_mach_8kg_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT000013', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000013', $item_sku); 
+                $midea_washer_dryer_10kg_qty_c  = $item_qty[$key];} 
+
+            if (in_array('SMT000014', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000014', $item_sku); 
+                $midea_washer_dryer_front_qty_c  = $item_qty[$key];} 
+
+            if (in_array('SMT000015', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000015', $item_sku); 
+                $midea_washing_mach_12kg_qty_c  = $item_qty[$key];}  
+
+            if (in_array('SMT000016', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000016', $item_sku); 
+                $midea_washing_mach_21kg_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT000016', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000016', $item_sku); 
+                $midea_micorware_20lts_qty_c  = $item_qty[$key];}   
+
+            if (in_array('SMT000016', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000016', $item_sku); 
+                $midea_microwave_25lts_qty_c  = $item_qty[$key];}   
+
 
             $new_qty = ($chefqty != "" ) ? $chefqty : 0;
             
@@ -874,6 +929,25 @@ date_default_timezone_set('Africa/Lagos');
              array("name" => "genesis_mop_qty_c", "value" => $genesis_mop ),
              array("name" => "pressure_king_pro_c", "value" => $pressure_king_pro ),
              array("name" => "reviva_gun_c", "value" => $reviva_gun ),
+// Somotech          
+            array("name" => "midea_360_blue_steel_qty_c", "value" => $order->midea_360_blue_steel_qty_c ),
+            array("name" => "midea_black_469lts_qty_c", "value" => $order->midea_black_469lts_qty_c ),
+            array("name" => "midea_470lts_black_qty_c", "value" => $order->midea_470lts_black_qty_c ),
+            array("name" => "midea_steel_480lt_qty_c", "value" => $order->midea_steel_480lt_qty_c ),
+            array("name" => "midea_black_glass_482lts_qty_c", "value" => $order->midea_black_glass_482lts_qty_c ),
+            array("name" => "midea_capacity_510lts_qty_c", "value" => $order->midea_capacity_510lts_qty_c ),
+            array("name" => "midea_490lts_qty_c", "value" => $order->midea_490lts_qty_c ),
+            array("name" => "midea_500lts_qty_c", "value" => $order->midea_500lts_qty_c ),
+            array("name" => "midea_stainles_640lts_qty_c", "value" => $order->midea_stainles_640lts_qty_c ),
+            array("name" => "midea_stainles_650lts_qty_c", "value" => $order->midea_stainles_650lts_qty_c ),
+            array("name" => "midea_beverage_309ltrs_qty_c", "value" => $order->midea_beverage_309ltrs_qty_c ),
+            array("name" => "midea_washing_mach_8kg_qty_c", "value" => $order->midea_washing_mach_8kg_qty_c ),
+            array("name" => "midea_washer_dryer_10kg_qty_c", "value" => $order->midea_washer_dryer_10kg_qty_c ),
+            array("name" => "midea_washer_dryer_front_qty_c", "value" => $order->midea_washer_dryer_front_qty_c ),
+            array("name" => "midea_washing_mach_12kg_qty_c", "value" => $order->midea_washing_mach_12kg_qty_c ),
+            array("name" => "midea_washing_mach_21kg_qty_c", "value" => $order->midea_washing_mach_21kg_qty_c ),
+            array("name" => "midea_micorware_20lts_qty_c", "value" => $order->midea_micorware_20lts_qty_c ),
+            array("name" => "midea_microwave_25lts_qty_c", "value" => $order->midea_microwave_25lts_qty_c ),
              
             array("name" => "total_amount", "value" => $order->total ),
             array("name" => "deliverycharge", "value" => $order->shipping_cost ),
