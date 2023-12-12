@@ -311,6 +311,10 @@ date_default_timezone_set('Africa/Lagos');
                 $payment_method = "BNPL";
                 $payment_status = "Paid";
             }
+            if($order->payment_method == "cheque"){
+                $payment_method = "BNPL";
+                $payment_status = "Pending";
+            }
 
             
             // Check if order has multiple Items
