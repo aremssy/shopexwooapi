@@ -847,7 +847,10 @@ date_default_timezone_set('Africa/Lagos');
                 $midea_micorware_20lts_qty_c  = $item_qty[$key];}   
 
             if (in_array('SMT000016', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT000016', $item_sku); 
-                $midea_microwave_25lts_qty_c  = $item_qty[$key];}   
+                $midea_microwave_25lts_qty_c  = $item_qty[$key];}
+                
+            if (in_array('STV5403144', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403144', $item_sku); 
+                $soundboks_gen_qty_c  = $item_qty[$key];}   
 
 
             $new_qty = ($chefqty != "" ) ? $chefqty : 0;
@@ -952,6 +955,7 @@ date_default_timezone_set('Africa/Lagos');
             array("name" => "midea_washing_mach_21kg_qty_c", "value" => $midea_washing_mach_21kg_qty_c ),
             array("name" => "midea_micorware_20lts_qty_c", "value" => $midea_micorware_20lts_qty_c ),
             array("name" => "midea_microwave_25lts_qty_c", "value" => $midea_microwave_25lts_qty_c ),
+            array("name" => "soundboks_gen_qty_c", "value" => $soundboks_gen_qty_c ),
              
             array("name" => "total_amount", "value" => $order->total ),
             array("name" => "deliverycharge", "value" => $order->shipping_cost ),
