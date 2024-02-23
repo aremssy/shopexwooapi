@@ -794,6 +794,15 @@ date_default_timezone_set('Africa/Lagos');
                 $threadmil  = $item_qty[$key];
             } 
 
+
+            if (in_array('STV5403147', $item_sku) || in_array('EM5403147', $item_sku) || in_array('GGL5403147', $item_sku) ) {
+                if(in_array('STV5403147', $item_sku)) {$channel_sku = "Website";  $key = array_search('STV5403147', $item_sku);}
+                if(in_array('GGL5403147', $item_sku)) {$channel_sku = "Google";   $key = array_search('GGL5403147', $item_sku);}
+                if(in_array('EM5403147', $item_sku)) {$channel_sku = "Email";   $key = array_search('EM5403147', $item_sku);}
+
+                $total_crunch  = $item_qty[$key];
+            } 
+
         //   SOMOTEX Products
             if (in_array('SMT00001', $item_sku)) {$channel_sku = "Website";  $key = array_search('SMT00001', $item_sku); 
                 $midea_360_blue_steel_qty_c  = $item_qty[$key];} 
